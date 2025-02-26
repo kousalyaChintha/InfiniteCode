@@ -9,12 +9,10 @@ function Body() {
   return (
     <div className="container-fluid">
         <div className="row">
-            {/* Sidebar - Left Panel */}
             <div className="col-12 col-md-4 p-3 border-end" id="left-panel">
                 <Pro setCopiedCode={setCopiedCode} />   
             </div>
 
-            {/* Main Content */}
             <div className="col-12 col-md-8 p-3" style={{backgroundColor:"#9984d4"}}>
                 <Inner copiedCode={copiedCode} />
             </div>

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import "../styles/CodeGenerator.css";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import "../styles/CodeGenerator.css";
 
-function CodeGenerator({ problem, onGenerate }) { // Renamed setCode to onGenerate
+function CodeGenerator(props) { 
     const [ans, setAns] = useState(["Generating....."]);
     const genAI = new GoogleGenerativeAI("AIzaSyBBelllFr5OZqNnMUgx9h6FC-5QXGTtmkU");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -10,7 +10,7 @@ function CodeGenerator({ problem, onGenerate }) { // Renamed setCode to onGenera
     useEffect(() => {
         async function fetchData() {
             try {
-                const result = await model.generateContent(problem);
+                const result = await model.generateContent(props.problem);
                 const response = await result.response;
                 const text = await response.text();
                 const lines = text.split("\n");
@@ -18,10 +18,10 @@ function CodeGenerator({ problem, onGenerate }) { // Renamed setCode to onGenera
                 console.log(lines);
                 setAns(lines);
 
-                if (typeof onGenerate === "function") { // Ensure onGenerate is a function
-                    onGenerate(text); 
+                if (typeof props.onGenerate === "function") { 
+                    props.onGenerate(text); 
                 } else {
-                    console.error("onGenerate is not a function");
+                    console.error("props.onGenerate is not a function");
                 }
             } catch (error) {
                 console.error("Error:", error);
@@ -29,10 +29,10 @@ function CodeGenerator({ problem, onGenerate }) { // Renamed setCode to onGenera
             }
         }
 
-        if (problem) { // Only run if problem is not empty
+        if (props.problem) { 
             fetchData();
         }
-    }, [onGenerate]); // Add problem dependency
+    }, [props.onGenerate]); 
 
     return (
         <div className="result">

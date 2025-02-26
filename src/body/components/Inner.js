@@ -72,10 +72,8 @@ function Inner({ copiedCode }) {
     };
 
     return (
-        <div style={{width:"100%", padding: "20px", fontFamily: "Arial, sans-serif" , backgroundColorcolor:"#9984d4"}}>
+        <div id="inner">
             <h2>Online Code Editor</h2>
-
-            {/* Language Selection Dropdown */}
             <select
                 onChange={(e) => setSelectedLanguage(languages.find(lang => lang.id === parseInt(e.target.value)))}
                 value={selectedLanguage.id}
@@ -115,18 +113,11 @@ function Inner({ copiedCode }) {
 
             {/* Input Field */}
             <h3>Input:</h3>
-            <textarea
+            <textarea 
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Enter input here..."
-                style={{
-                    width: "100%",
-                    height: "80px",
-                    padding: "10px",
-                    fontSize: "14px",
-                    borderRadius: "5px",
-                    border: "1px solid #ccc",
-                }}
+                className="inout"
             />
 
             {/* Run Code Button */}
@@ -134,13 +125,7 @@ function Inner({ copiedCode }) {
 
             {/* Output Display */}
             <h3>Output:</h3>
-            <pre style={{ width: "100%",
-                    height: "80px",
-                    padding: "10px",
-                    fontSize: "14px",
-                    borderRadius: "5px",
-                    backgroundColor: "#f4f4f4",
-                    border: "1px solid #ccc", }}>
+            <pre className="inout">
                 {output}
             </pre>
         </div>

@@ -3,7 +3,7 @@ import Editor from "@monaco-editor/react";
 import Button from "./Button";
 import "../styles/Inner.css"
 
-function Inner({ copiedCode }) {
+function Inner(props) {
     const [languages, setLanguages] = useState([]); 
     const [selectedLanguage, setSelectedLanguage] = useState({ id: 63, name: "JavaScript" });
     const [editorCode, setEditorCode] = useState("// Write your code here...");
@@ -39,8 +39,8 @@ function Inner({ copiedCode }) {
 
     
     useEffect(() => {
-        if (copiedCode) setEditorCode(copiedCode);
-    }, [copiedCode]);
+        if (props.copiedCode) setEditorCode(props.copiedCode);
+    }, [props.copiedCode]);
 
     
     const runCode = async () => {

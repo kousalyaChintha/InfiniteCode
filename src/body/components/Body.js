@@ -1,5 +1,5 @@
 import "../styles/Body.css";
-import { useState } from "react";
+import {useState } from "react";
 import Pro from "./Pro";
 import Inner from "./Inner";
 

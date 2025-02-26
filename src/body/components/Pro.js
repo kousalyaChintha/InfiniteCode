@@ -2,9 +2,8 @@ import { useState, useCallback } from "react";
 import "../styles/Pro.css";
 import Button from "./Button";
 import CodeGenerator from "./CodeGenerator";
-import Inner from "./Inner";
 
-function Pro() {
+function Pro(props) {
     const [problemStatement, setProblemStatement] = useState("");
     const [showGenerator, setShowGenerator] = useState(false);
     const [empgen, setEmpgen] = useState("Result will be displayed here....");
@@ -33,10 +32,11 @@ function Pro() {
     };
 
     const handleCopyToEditor = (code) => {
-        <Inner code={code} />;
+        const firstNewLineIndex = code.indexOf("\n");
+        props.setCopiedCode(code.slice(firstNewLineIndex + 1));
         console.log("Copied Code to Editor:", code);
     };
-
+    
     const handleCopyToClipboard = (code) => {
         const firstNewLineIndex = code.indexOf("\n");
         navigator.clipboard.writeText(code.slice(firstNewLineIndex+1)).then(() => {

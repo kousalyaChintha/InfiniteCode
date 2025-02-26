@@ -37,12 +37,12 @@ function Inner({ copiedCode }) {
         fetchLanguages();
     }, []);
 
-    // Update editor when `copiedCode` changes
+    
     useEffect(() => {
         if (copiedCode) setEditorCode(copiedCode);
     }, [copiedCode]);
 
-    // Function to execute the code
+    
     const runCode = async () => {
         setOutput("Running...");
 
@@ -86,7 +86,7 @@ function Inner({ copiedCode }) {
                 ))}
             </select>
 
-            {/* Monaco Code Editor */}
+
             <Editor
                 height="400px"
                 width="100%"
@@ -111,7 +111,7 @@ function Inner({ copiedCode }) {
                 }}
             />
 
-            {/* Input Field */}
+
             <h3>Input:</h3>
             <textarea 
                 value={input}
@@ -120,10 +120,10 @@ function Inner({ copiedCode }) {
                 className="inout"
             />
 
-            {/* Run Code Button */}
+
             <Button click={runCode} text="Run Code" />
 
-            {/* Output Display */}
+
             <h3>Output:</h3>
             <pre className="inout">
                 {output}

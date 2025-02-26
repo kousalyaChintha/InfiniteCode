@@ -4,7 +4,6 @@
 
 
 #prostate{
-    /* width: "100%"; */
     width: 29rem;
     color: white;
     height: 10rem;
@@ -28,11 +27,11 @@
     background-color: #230c33;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .result {
-        width: 100%;  /* Full width on small screens */
-        height: auto; /* Allow height to adjust */
+        width: 100%; 
+        height: auto;
     }
 }
 

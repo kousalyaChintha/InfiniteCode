@@ -1,4 +1,3 @@
-/* Navbar Container */
 .navbar {
     display: flex;
     align-items: center;
@@ -7,33 +6,33 @@
     width: 100%;
 }
 
-/* Logo & Title Section - Left Aligned */
+
 .navbar-brand {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between logo and text */
+    gap: 15px; 
     font-size: 1.8rem;
     font-weight: bold;
     color: white;
 }
 
-/* Navbar Toggler (for Mobile) */
+
 .navbar-toggler {
     font-size: 2rem;
     border: none;
     background: transparent;
     color: white;
-    display: none; /* Hidden on large screens */
+    display: none; 
     cursor: pointer;
 }
 
-/* Navigation Links - Right Aligned */
+
 .navbar-nav {
     display: flex;
     align-items: center;
-    gap: 40px; /* Space between Home and About */
+    gap: 40px; 
     list-style: none;
-    margin-left: auto; /* Pushes nav items to the right */
+    margin-left: auto; 
 }
 
 .nav-item {
@@ -54,7 +53,7 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
@@ -62,7 +61,7 @@
     }
 
     .navbar-toggler {
-        display: block; /* Show toggler on small screens */
+        display: block; 
     }
 
     .navbar-nav {
@@ -79,6 +78,6 @@
     }
 
     .navbar-nav.show {
-        display: flex; /* Show menu when toggled */
+        display: flex; 
     }
 }

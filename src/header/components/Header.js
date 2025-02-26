@@ -11,7 +11,7 @@ function Header() {
         };
 
         window.addEventListener("resize", updateSize);
-        updateSize(); // Set initial size
+        updateSize();
 
         return () => window.removeEventListener("resize", updateSize);
     }, []);

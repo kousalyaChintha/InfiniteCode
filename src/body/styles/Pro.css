@@ -1,0 +1,48 @@
+#left-panel {
+    background-color: #9984d4;
+}
+
+
+#prostate{
+    /* width: "100%"; */
+    width: 29rem;
+    color: white;
+    height: 10rem;
+    overflow: auto;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #230c33;
+}
+
+.result {
+    max-width: 100%;
+    color: white;
+    height: 25rem;
+    overflow: auto;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #230c33;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .result {
+        width: 100%;  /* Full width on small screens */
+        height: auto; /* Allow height to adjust */
+    }
+}
+
+
+#item {
+    font-size: 14px;
+}
+
+
+#name1 {
+    margin-left: 3px;
+    color: black;
+}

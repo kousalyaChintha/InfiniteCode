@@ -1,0 +1,32 @@
+.it {
+    font-size: 14px;
+    text-align: left;  /* Ensures text is left-aligned */
+    display: block;    /* Each list item takes full width */
+    padding: 5px 0;    /* Adds spacing between items */
+    width: 100%;       /* Ensures full width for list items */
+    margin-left: 0px;
+}
+
+.result {
+    width: 100%;  
+    max-width: 600px;  /* Controls width for better responsiveness */
+    color: white;
+    height: 25rem;
+    overflow: auto;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #230c33;
+    text-align: left;  /* Ensures text inside result is left-aligned */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Aligns content to the left */
+}
+
+ul {
+    padding-left: 0;  /* Removes unwanted left padding */
+    margin: 0;        /* Removes default margin */
+    list-style-type: none;  /* Removes bullet points */
+    width: 100%;
+}

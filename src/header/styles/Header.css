@@ -1,0 +1,11 @@
+#head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: clamp(60px, 10vh, 120px); /* Adjusts dynamically */
+    background-color: #592e83;
+    color: white;
+    padding: calc(1vw + 5px); /* Responsive padding */
+    font-size: min(4vw, 1.5rem); /* Responsive text size */
+}

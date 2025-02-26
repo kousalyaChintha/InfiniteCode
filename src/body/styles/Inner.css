@@ -1,0 +1,13 @@
+#inner-container{
+    display: grid;
+    padding-left: 0.5rem;
+    grid-template-rows: 2rem;
+    width: 61rem;
+}
+
+#code{
+    color: black;
+    background-color: #230c33;
+    font-size: 1rem;
+    width: 60.4rem;
+}

@@ -1,0 +1,9 @@
+#container {
+    display: grid;
+    grid-template-columns: 34% 66%;
+    background-color: #9984d4;
+}
+
+.result {
+    background-color: #9984d4;
+}

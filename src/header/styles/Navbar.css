@@ -1,27 +1,84 @@
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+/* Navbar Container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 15px 5%;
+    width: 100%;
 }
 
-.navbar-toggler {
+/* Logo & Title Section - Left Aligned */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and text */
     font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navbar Toggler (for Mobile) */
+.navbar-toggler {
+    font-size: 2rem;
     border: none;
     background: transparent;
     color: white;
+    display: none; /* Hidden on large screens */
+    cursor: pointer;
 }
 
+/* Navigation Links - Right Aligned */
 .navbar-nav {
-    gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between Home and About */
+    list-style: none;
+    margin-left: auto; /* Pushes nav items to the right */
 }
 
-.nav-item .nav-link {
-    font-size: 1.5rem;
-    padding: 8px 15px;
-    transition: all 0.3s ease-in-out;
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
     color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
-.nav-item .nav-link:hover {
+.nav-link:hover {
     border-radius: 5px;
-    
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 15px;
+    }
+
+    .navbar-toggler {
+        display: block; /* Show toggler on small screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: #333;
+        width: 100%;
+        display: none;
+        gap: 20px;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .navbar-nav.show {
+        display: flex; /* Show menu when toggled */
+    }
 }

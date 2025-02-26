@@ -22,10 +22,10 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-md  p-3">
             {/* Logo */}
-            <a className="navbar-brand d-flex align-items-center" href="#">
+            <Link className="nav-link" to="/">
                 <img src="logo.jpg" alt="logo" margin-right = "2px" width="50px" height="50px" className="me-2" />
                 InfiniteCode
-            </a>
+            </Link>
 
             {/* Hamburger Icon */}
             <button

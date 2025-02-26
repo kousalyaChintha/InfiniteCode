@@ -3,7 +3,7 @@ import Editor from "@monaco-editor/react";
 import Button from "./Button";
 import "../styles/Inner.css"
 
-function Inner(props) {
+function Inner({ copiedCode }) {
     const [languages, setLanguages] = useState([]); 
     const [selectedLanguage, setSelectedLanguage] = useState({ id: 63, name: "JavaScript" });
     const [editorCode, setEditorCode] = useState("// Write your code here...");
@@ -37,12 +37,11 @@ function Inner(props) {
         fetchLanguages();
     }, []);
 
-    
-    useEffect(() => {
-        if (props.copiedCode) setEditorCode(props.copiedCode);
-    }, [props.copiedCode]);
 
-    
+    useEffect(() => {
+        if (copiedCode) setEditorCode(copiedCode);
+    }, [copiedCode]);
+
     const runCode = async () => {
         setOutput("Running...");
 
@@ -86,7 +85,6 @@ function Inner(props) {
                 ))}
             </select>
 
-
             <Editor
                 height="400px"
                 width="100%"
@@ -110,7 +108,6 @@ function Inner(props) {
                     quickSuggestions: { other: true, comments: true, strings: true },
                 }}
             />
-
 
             <h3>Input:</h3>
             <textarea 
